@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 function ThemeToggle() {
   const [isDark, setIsDark] = useState(false);
 
+  // Runs once, right after the first render: read the saved theme
   useEffect(() => {
     try {
       setIsDark(localStorage.getItem("theme") === "dark");
